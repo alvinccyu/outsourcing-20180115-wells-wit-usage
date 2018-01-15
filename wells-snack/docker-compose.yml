@@ -1,0 +1,25 @@
+version: "3"
+
+services:
+  server:
+    build: ./server
+    ports:
+      - "23360:23360"
+    volumes:
+      - "./server:/app"
+    environment:
+      - PYTHON_ENV=dev
+      - LISTEN_PORT=23360
+      - WIT_SERVER_ACCESS_TOKEN=TRKIW25VB3ZSFHZAR6XR4R2ZCG5C7XKZ
+    command: python run.py
+
+  client:
+    build:
+      context: ./client
+      args:
+        REACT_APP_WEB_API_SERVER: http://localhost:23360/v1.0
+    ports:
+      - "3000:3000"
+    volumes:
+      - "./client:/app"
+    command: yarn start
