@@ -1,4 +1,4 @@
-外包測試案
+outsourcing-20180115-wells-wit-usage
 
 # 主要目的
 
@@ -28,19 +28,7 @@ Robot：林雪碧，你的 email 是 lin@xotours.xyz
 * 後端使用 Python Flask framework，作為串接 wit.ai 以及前端的中間層。
 	* 如果有對話 finite state machine 也可以加在這一層。
 * 前端使用 React
-	* 有 mobile 以及 desktop 版本。
-* 請使用提供的 Docker 檔案作為開發框架，裡面包含了
-	* server：python flask folder
-	* client：react folder
-	* docker-compose：專案設定架構
-	* 使用方法：安裝 docker、docker-compose，在根目錄
-
-	```
-	$docker-compose up --build -d
-	```
-
-	就可以同時建立 server 以及 client，server 網址是 `http://localhost:8080`，client 網址是 `http://localhost:3000`。
-
+	* 有分 mobile 以及 desktop 版本。
 
 # 驗收標準
 
